@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editExamName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Exam Name"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location"
+        android:layout_below="@id/editExamName"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editExamDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date"
+        android:focusable="false"
+        android:clickable="true"
+        android:layout_below="@id/editLocation"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editExamTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Time (HH:MM)"
+        android:inputType="time"
+        android:layout_below="@id/editExamDate"
+        android:layout_marginBottom="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerExamAMPM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/ampm_array"
+        android:layout_below="@id/editExamTime"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/addExamButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Exam"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/spinnerExamAMPM"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>

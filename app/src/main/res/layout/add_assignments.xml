@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editAssignmentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Assignment Title"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editDueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Due Date"
+        android:focusable="false"
+        android:clickable="true"
+        android:layout_below="@id/editAssignmentTitle"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/editAssignmentTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Time"
+        android:inputType="time"
+        android:layout_below="@id/editDueDate"
+        android:layout_marginBottom="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerAMPM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/ampm_array"
+        android:layout_below="@id/editAssignmentTime"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/labelAssociatedClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Associated Class"
+        android:layout_below="@id/spinnerAMPM"
+        android:layout_marginBottom="4dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerAssociatedClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelAssociatedClass"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/addAssignmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Assignment"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/spinnerAssociatedClass"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>

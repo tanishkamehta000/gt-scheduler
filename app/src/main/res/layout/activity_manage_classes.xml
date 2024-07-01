@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editCourseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Course Name"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/editTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Time"
+        android:inputType="time"
+        android:layout_below="@id/editCourseName"
+        android:layout_marginBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spinnerAMPM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/ampm_array"
+        android:layout_below="@id/editTime"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/editInstructor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Instructor"
+        android:layout_below="@id/spinnerAMPM"
+        android:layout_marginBottom="16dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editInstructor"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/checkboxGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/checkMonday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monday" />
+
+            <CheckBox
+                android:id="@+id/checkTuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tuesday" />
+
+            <CheckBox
+                android:id="@+id/checkWednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wednesday" />
+
+            <CheckBox
+                android:id="@+id/checkThursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thursday" />
+
+            <CheckBox
+                android:id="@+id/checkFriday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friday" />
+
+            <CheckBox
+                android:id="@+id/checkSaturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saturday" />
+
+            <CheckBox
+                android:id="@+id/checkSunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunday" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/addClassButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Class"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/checkboxGroup"
+        tools:ignore="NotSibling" />
+</RelativeLayout>

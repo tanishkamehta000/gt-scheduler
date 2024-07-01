@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/weekTable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:background="@android:color/darker_gray"
+                    android:padding="4dp">
+
+                    <TextView android:text="Monday" android:padding="4dp" android:minWidth="120dp"/>
+                    <TextView android:text="Tuesday" android:padding="4dp" android:minWidth="120dp"/>
+                    <TextView android:text="Wednesday" android:padding="4dp" android:minWidth="120dp"/>
+                    <TextView android:text="Thursday" android:padding="4dp" android:minWidth="120dp"/>
+                    <TextView android:text="Friday" android:padding="4dp" android:minWidth="120dp"/>
+                    <TextView android:text="Saturday" android:padding="4dp" android:minWidth="120dp"/>
+                    <TextView android:text="Sunday" android:padding="4dp" android:minWidth="120dp"/>
+                </TableRow>
+
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnAddAssignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Assignment"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/addClassButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Class"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/btnAddExam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Exam"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/btnAddTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Task"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+
+
+
+    <ListView
+        android:id="@+id/listViewAssignments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+    </ListView>
+
+</LinearLayout>
